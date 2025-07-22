@@ -1,5 +1,6 @@
 import {words} from "../constants/index.js";
 import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 
 const Hero = () => {
     return (
@@ -8,7 +9,7 @@ const Hero = () => {
                 <img src="/images/bg.png" alt="background"/>
             </div>
             <div className="hero-layout">
-                {/*{ASFDSDFASDF}*/}
+                {/*{Left Hero Content}*/}
                 <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
 
                     <div className="flex flex-col gap-7">
@@ -44,12 +45,17 @@ const Hero = () => {
                         />
                     </div>
                 </header>
-                {/*{ASFDSDFASDF}*/}
 
+                {/*{Right, 3d Model}*/}
+                <figure>
+                    <div className="hero-3d-layout xl:top-40 top-120">   
+                        {/* asdfasdas */}
+                        <HeroExperience />
+                    </div>
+                </figure>
             </div>
-
         </section>
     )
 }
 
-export default Hero
+export default Hero;
