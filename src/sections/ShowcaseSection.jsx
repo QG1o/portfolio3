@@ -27,4 +27,4 @@ const App = () => {
   );
 };
 
-export default ShowcaseSection
+export default App;
