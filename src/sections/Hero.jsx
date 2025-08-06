@@ -8,7 +8,7 @@ import AnimatedCounter from "../components/AnimatedCounter.jsx";
 
 const Hero = () => {
     useGSAP(() => {
-        gsap.fromTo('.her-text h1',
+        gsap.fromTo('.hero-text h1',
             {
                 y: 50,
                 opacity: 0
@@ -16,8 +16,8 @@ const Hero = () => {
             {
                 y: 0,
                 opacity: 1,
-                stagger: 0.2,
-                duration: 1,
+                stagger: 1.5,
+                duration: 5,
                 ease: 'power2.inOut'
             },
         )
@@ -55,7 +55,7 @@ const Hero = () => {
                             <h1>into Real projects</h1>
                             <h1>that deliver Results</h1>
                         </div>
-                        
+
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                             Hi, I'm Adrian, a developer based in Crotia with a passion for code.
                         </p>
@@ -70,7 +70,7 @@ const Hero = () => {
 
                 {/*{Right, 3d Model}*/}
                 <figure>
-                    <div className="hero-3d-layout xl:top-40 top-120">   
+                    <div className="hero-3d-layout xl:top-40 top-120">
                         {/* asdfasdas */}
                         <HeroExperience />
                     </div>
