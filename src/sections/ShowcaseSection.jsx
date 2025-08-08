@@ -11,9 +11,6 @@ const ShowcaseSection = () => {
     const project2Ref = useRef(null);
     const project3Ref = useRef(null);
 
-
-
-
     useGSAP(() => {
         gsap.fromTo(
         sectionRef.current,
@@ -51,16 +48,16 @@ const ShowcaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <div className="showcaseLayout">
+        <div className="showcaselayout">
           {/* LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde" />
+              <img src="/images/project1.png" alt="Ryde App Interface" />
             </div>
             <div className="text-content">
-                <h2>ON-Demand Rides Made Simple with a Powerful, User-friendyly App called Ryde</h2>
+                <h2>On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde</h2>
                 <p className="text-white-50 md:text-xl">
-                    An app built with React Native, Expo, and TailwindCss for a fast, user friendyl expereince.
+                    An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.
                 </p>
             </div>
           </div>
@@ -69,16 +66,16 @@ const ShowcaseSection = () => {
             <div className="project-list-wrapper overflow-hidden">
                <div className="project" ref={project2Ref}>
                <div className="image-wrapper bg-[#5fefdb]">
-                <img src="/images/project2.png" alt="Libary Management Plattform" />
+                <img src="/images/project2.png" alt="Library Management Platform" />
                </div>
-                   <h2>Libary MAnagen Platform</h2>
+                   <h2>The Library Management Platform</h2>
                </div>
 
                 <div className="project" ref={project3Ref}>
                     <div className="image-wrapper bg-[#fe7feb]">
-                        <img src="/images/project3.png" alt="YC Directory" />
+                        <img src="/images/project3.png" alt="YC Directory App" />
                     </div>
-                    <h2>YC Dir - A startup shocasce app</h2>
+                    <h2>YC Directory - A Startup Showcase App</h2>
                 </div>
 
             </div>
