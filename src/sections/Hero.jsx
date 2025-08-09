@@ -63,7 +63,7 @@ const Hero = () => {
                         <Button
                         classname="md:w-80 md:h-16 w-60 h-12"
                         id="button"
-                        text="Meine Projekte"
+                        text="🛠️ Meine Projekte"
                         />
                     </div>
                 </header>

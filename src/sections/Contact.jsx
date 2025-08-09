@@ -28,8 +28,8 @@ const Contact = () => {
         <section id="contact" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader
-                    title="Get in Touch – Let's Connect"
-                    sub="💬 Contact Information"
+                    title="Schreib mir eine Nachricht"
+                    sub="🌐 Kontaktinformationen"
                 />
 
                 <div className="mt-16 grid-12-cols">
@@ -82,7 +82,7 @@ const Contact = () => {
                                 <button type="submit">
                                     <div className="cta-button group w-full flex items-center justify-center p-4 bg-white text-black rounded-md hover:bg-amber-900 transition-colors">
                                         <div className="bg-circle" />
-                                        <p className="text font-semibold">Send Message</p>
+                                        <p className="text font-semibold">📩 Nachricht senden</p>
                                         <div className="arrow-wrapper ml-2">
                                             <img src="/images/arrow-right.svg" alt="arrow" className="w-4 h-4" />
                                         </div>

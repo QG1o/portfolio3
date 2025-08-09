@@ -12,7 +12,7 @@ const navLinks = [
         link: "#skills",
     },
     {
-        name: "Kundenstimmen",
+        name: "Mindset",
         link: "#testimonials",
     },
 ];
@@ -214,49 +214,49 @@ const expLogos = [
 
 const testimonials = [
     {
-        name: "Esther Howard",
-        mentions: "@estherhoward",
+        name: "Epiktet (Handbüchlein der Moral, Abschnitt 5)",
+        mentions: "@epiktet",
         review:
-            "Georgios hat unsere Serverlandschaft sicherer gemacht und Prozesse automatisiert — schnelle und saubere Arbeit.",
-        imgPath: "/images/client1.png",
-
+            "Nicht die Dinge selbst beunruhigen die Menschen, sondern die Meinungen und Urteile über die Dinge.",
+        imgPath: "/images/client1.png"
     },
     {
-        name: "Wade Warren",
-        mentions: "@wadewarren",
+        name: "Marcus Aurelius (Meditationen, Buch 5, Abschnitt 16)",
+        mentions: "@marcusaurelius",
         review:
-            "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+            "Die Seele wird durch den Gedanken, den sie wählt, geformt. Wähle gute Gedanken.",
+        imgPath: "/images/client2.png"
     },
     {
-        name: "Guy Hawkins",
-        mentions: "@guyhawkins",
+        name: "Buddha (Dhammapada, Vers 1)",
+        mentions: "@buddha",
         review:
-            "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        imgPath: "/images/client2.png",
+            "Alle Dinge entstehen durch den Geist. Wenn ein Mensch mit reinem Geist spricht oder handelt, folgt ihm das Glück wie sein Schatten.",
+        imgPath: "/images/client3.png"
     },
     {
-        name: "Marvin McKinney",
-        mentions: "@marvinmckinney",
+        name: "Seneca (Briefe an Lucilius, Brief 113, Abschnitt 29)",
+        mentions: "@seneca",
         review:
-            "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+            "Beherrsche deinen Geist, und du wirst stärker sein als der, der Städte erobert.",
+        imgPath: "/images/client5.png"
     },
     {
-        name: "Floyd Miles",
-        mentions: "@floydmiles",
+        name: "Bibel (Römer 12:2)",
+        mentions: "@bibel",
         review:
-            "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-        imgPath: "/images/client4.png",
+            "Und passt euch nicht dieser Welt an, sondern ändert euch durch Erneuerung eures Sinnes, damit ihr prüfen könnt, was der gute und wohlgefällige und vollkommene Wille Gottes ist.",
+        imgPath: "/images/client4.png"
     },
     {
-        name: "Albert Flores",
-        mentions: "@albertflores",
+        name: "Seneca (De Ira, Buch 2, Abschnitt 36)",
+        mentions: "@seneca",
         review:
-            "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-        imgPath: "/images/client6.png",
+            "Lenke deine Gedanken auf das Gute, und dein Geist wird zur Festung des Friedens.",
+        imgPath: "/images/client6.png"
     },
 ];
+
 
 const socialImgs = [
     {
@@ -276,7 +276,7 @@ const socialImgs = [
     },
     {
         name: "linkedin",
-        url: "https://www.linkedin.com/",
+        url: "https://www.linkedin.com/in/georgiost/",
         imgPath: "/images/linkedin.png",
     },
 ];

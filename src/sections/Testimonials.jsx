@@ -8,15 +8,15 @@ const Testimonials = () => {
         <section id="testimonials" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader
-                    title="Das sagen meine Kunden"
-                    sub="💬 Feedback & Bewertungen"
+                    title="Inspiration & Einsichten"
+                    sub="💬 Zitate, die motivieren"
                 />
 
                 <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
                     {testimonials.map(({ imgPath, name, mentions, review }) => (
                         <GlowCard card={{ review }}>
                             <div className="flex items-center gap-3">
-                                <div>
+                                <div className="w-16 h-16 rounded-full border-4 border-blue-900 overflow-hidden flex-shrink-0">
                                     <img src={imgPath} alt={name} />
                                 </div>
                                 <div>

@@ -236,7 +236,7 @@ section {
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2
+      @apply group-hover:bg-blue-800 size-10 rounded-full absolute right-10 top-1/2
             -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
       img {
@@ -439,6 +439,7 @@ section {
 
 .card {
   --start: 0;
+    --gradient: conic-gradient(from 0deg, #c5a009, #e0d8b0, #c5a009);    /* beige */
   position: relative;
   z-index: 40;
   overflow: hidden;
@@ -484,4 +485,8 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.card:hover {
+    --gradient: conic-gradient(from 0deg, #1762a5, #0427d9, #1762a5); /* beige Hover-Gradient */
 }
