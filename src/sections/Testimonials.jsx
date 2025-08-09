@@ -7,9 +7,10 @@ const Testimonials = () => {
     return (
         <section id="testimonials" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
-                <TitleHeader title="What People say about m?"
-                             sub = " 🌐 Client Fedback Highlights"
-                             />
+                <TitleHeader
+                    title="Das sagen meine Kunden"
+                    sub="💬 Feedback & Bewertungen"
+                />
 
                 <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
                     {testimonials.map(({ imgPath, name, mentions, review }) => (

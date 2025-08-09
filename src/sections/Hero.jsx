@@ -35,8 +35,8 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Shaping
-                            <span className="slide">
+                                Ich forme
+                                <span className="slide">
                                 <span className="wrapper">
                                     {words.map((word) => (
                                         <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
@@ -52,18 +52,18 @@ const Hero = () => {
                                 </span>
                             </span>
                             </h1>
-                            <h1>into Real projects</h1>
-                            <h1>that deliver Results</h1>
+                            <h1> zu echten</h1>
+                            <h1>  Ergebnissen. </h1>
                         </div>
 
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, I'm Georgios, a developer based in Crotia with a passion for code.
+                            Hi, ich bin Georgios – sichere IT, smart automatisiert.
                         </p>
 
                         <Button
                         classname="md:w-80 md:h-16 w-60 h-12"
                         id="button"
-                        text="See my Work"
+                        text="Meine Projekte"
                         />
                     </div>
                 </header>

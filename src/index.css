@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -12,7 +12,7 @@ body {
   background-color: black;
   color: white;
   scroll-behavior: smooth;
-  font-family: "Mona Sans", sans-serif;
+  font-family: "Orbitron", monospace;
 }
 
 section {
@@ -20,7 +20,7 @@ section {
 }
 
 @theme {
-  --font-sans: "Mona Sans", sans-serif;
+  --font-sans: "Orbitron", monospace;
   --color-white-50: #d9ecff;
   --color-black-50: #1c1c21;
   --color-black-100: #0e0e10;
@@ -117,9 +117,15 @@ section {
       @apply mx-auto flex items-center justify-between;
     }
 
-    .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
-    }
+      .logo {
+          @apply text-blue-500 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+          transition-property: color, transform;
+          transition-duration: 300ms;
+      }
+
+      .logo:hover {
+          color: #a62396;
+      }
 
     nav.desktop {
       @apply hidden lg:flex items-center;
@@ -128,11 +134,14 @@ section {
         @apply flex space-x-8;
 
         li {
-          @apply text-white-50 relative;
+          @apply text-blue-500 relative;
 
           span {
-            @apply transition-colors duration-300 hover:text-white;
+            @apply transition-colors duration-300;
           }
+             span:hover {
+                color: #a62396;
+            }
 
           .underline {
             @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
@@ -145,7 +154,7 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+        @apply px-5 py-2 rounded-lg bg-[#b39b62] text-black group-hover:bg-blue-950 transition-colors duration-300;
 
         span {
           @apply group-hover:text-white transition-colors duration-300;
@@ -211,10 +220,14 @@ section {
     max-width: 32rem;
     /* asdasdas */
 
+      &:hover {
+          background-color: #a62396;
+      }
+
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2
             w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-            rounded-full bg-white-50 transition-all duration-500;
+            rounded-full bg-[#b39b62] transition-all duration-500;
     }
 
     .text {
@@ -233,7 +246,7 @@ section {
   }
 
   .card-border {
-    @apply border border-black-50 bg-black-100;
+    @apply border border-black-50 bg-blue-900;
   }
 
   .marquee-item {

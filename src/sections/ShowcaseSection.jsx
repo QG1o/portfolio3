@@ -46,42 +46,48 @@ const ShowcaseSection = () => {
     }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="app-showcase">
-      <div className="w-full">
-        <div className="showcaselayout">
-          {/* LEFT */}
-          <div className="first-project-wrapper" ref={project1Ref}>
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
-            </div>
-            <div className="text-content">
-                <h2>On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde</h2>
-                <p className="text-white-50 md:text-xl">
-                    An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.
-                </p>
-            </div>
+      <section id="work" ref={sectionRef} className="app-showcase">
+          <div className="w-full">
+              <div className="showcaselayout">
+                  {/* LEFT */}
+                  <div className="first-project-wrapper" ref={project1Ref}>
+                      <div className="image-wrapper">
+                          <a href="https://qg1o.github.io/portfolio2/" target="_blank" rel="noopener noreferrer">
+                              <img src="/images/project11.png" alt="Ryde App Interface" />
+                          </a>
+                      </div>
+                      <div className="text-content">
+                          <h2>Portfolio 1</h2>
+                          <p className="text-white-50 md:text-xl">
+                              Persönliche Portfolio-Webseite zur Präsentation von Fähigkeiten und Projekten.
+                          </p>
+                      </div>
+                  </div>
+
+                  {/* RIGHT */}
+                  <div className="project-list-wrapper overflow-hidden">
+                      <div className="project" ref={project2Ref}>
+                          <div className="image-wrapper bg-[#5fefdb]">
+                              <a href="https://qg1o.github.io/portfolio1/" target="_blank" rel="noopener noreferrer">
+                                  <img src="/images/project22.png" alt="Library Management Platform" />
+                              </a>
+                          </div>
+                          <h2>Website 2</h2>
+                      </div>
+
+                      <div className="project" ref={project3Ref}>
+                          <div className="image-wrapper bg-[#fe7feb]">
+                              <a href="https://qg1o.github.io/portfolio3/" target="_blank" rel="noopener noreferrer">
+                                  <img src="/images/project22.png" alt="YC Directory App" />
+                              </a>
+                          </div>
+                          <h2>Website 3</h2>
+                      </div>
+                  </div>
+              </div>
           </div>
+      </section>
 
-          {/* RIGHT */}
-            <div className="project-list-wrapper overflow-hidden">
-               <div className="project" ref={project2Ref}>
-               <div className="image-wrapper bg-[#5fefdb]">
-                <img src="/images/project2.png" alt="Library Management Platform" />
-               </div>
-                   <h2>The Library Management Platform</h2>
-               </div>
-
-                <div className="project" ref={project3Ref}>
-                    <div className="image-wrapper bg-[#fe7feb]">
-                        <img src="/images/project3.png" alt="YC Directory App" />
-                    </div>
-                    <h2>YC Directory - A Startup Showcase App</h2>
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </section>
   );
 };
 

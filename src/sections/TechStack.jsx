@@ -30,8 +30,8 @@ const TechStack = () => {
         <div id="skills" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader
-                    title="My Preferred Tech STack"
-                    sub="🗓️&nbsp; The Skills I bringt"
+                    title="Mein bevorzugter Tech-Stack"
+                    sub="💪 Die Skills, die ich mitbringe"
                 />
 
                 <div className="tech-grid">

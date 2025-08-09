@@ -80,11 +80,11 @@ const Contact = () => {
                                 </div>
 
                                 <button type="submit">
-                                    <div className="cta-button group w-full flex items-center justify-center p-4 bg-white text-black rounded-md hover:bg-gray-100 transition-colors">
+                                    <div className="cta-button group w-full flex items-center justify-center p-4 bg-white text-black rounded-md hover:bg-amber-900 transition-colors">
                                         <div className="bg-circle" />
                                         <p className="text font-semibold">Send Message</p>
                                         <div className="arrow-wrapper ml-2">
-                                            <img src="/images/arrow-down.svg" alt="arrow" className="w-4 h-4" />
+                                            <img src="/images/arrow-right.svg" alt="arrow" className="w-4 h-4" />
                                         </div>
                                     </div>
                                 </button>

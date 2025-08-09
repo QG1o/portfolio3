@@ -1,38 +1,38 @@
 const navLinks = [
     {
-        name: "Work",
+        name: "Projekte",
         link: "#work",
     },
     {
-        name: "Experience",
+        name: "Erfahrung ",
         link: "#experience",
     },
     {
-        name: "Skills",
+        name: "Kompetenzen ",
         link: "#skills",
     },
     {
-        name: "Testimonials",
+        name: "Kundenstimmen",
         link: "#testimonials",
     },
 ];
 
 const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
+    { text: "Sysadmin", imgPath: "/images/ideas.svg" },
+    { text: "IT-Sicherheit", imgPath: "/images/concepts.svg" },
+    { text: "Automatisierung", imgPath: "/images/designs.svg" },
+    { text: "Python-Scripting", imgPath: "/images/code.svg" },
+    { text: "React.js", imgPath: "/images/ideas.svg" },
+    { text: "DevOps Tools", imgPath: "/images/concepts.svg" },
+    { text: "Bash Scripting", imgPath: "/images/designs.svg" },
+    { text: "Active Directory", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
-    { value: 15, suffix: "+", label: "Years of Experience" },
-    { value: 200, suffix: "+", label: "Satisfied Clients" },
-    { value: 108, suffix: "+", label: "Completed Projects" },
-    { value: 90, suffix: "%", label: "Client Retention Rate" },
+    { value: 15, suffix: "+", label: "Jahre Erfahrung" },
+    { value: 200, suffix: "+", label: "Projekte & Kunden" },
+    { value: 108, suffix: "+", label: "Erfolgreiche Deployments" },
+    { value: 90, suffix: "%", label: "Verfügbarkeit / SLA" },
 ];
 
 const logoIconsList = [
@@ -74,71 +74,71 @@ const logoIconsList = [
 const abilities = [
     {
         imgPath: "/images/seo.png",
-        title: "Quality Focus",
-        desc: "Delivering high-quality results while maintaining attention to every detail.",
+        title: "Qualitätsorientiert",
+        desc: "Konsequent hochwertige Ergebnisse mit Liebe zum Detail liefern.",
     },
     {
         imgPath: "/images/chat.png",
-        title: "Reliable Communication",
-        desc: "Keeping you updated at every step to ensure transparency and clarity.",
+        title: "Zuverlässige Kommunikation",
+        desc: "Transparente Updates während des gesamten Projekts sicherstellen.",
     },
     {
         imgPath: "/images/time.png",
-        title: "On-Time Delivery",
-        desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+        title: "Termintreue",
+        desc: "Projekte immer fristgerecht mit hoher Qualität abschließen.",
     },
 ];
 
 const techStackImgs = [
     {
-        name: "React Developer",
+        name: "React Entwickler",
         imgPath: "/images/logos/react.png",
     },
     {
-        name: "Python Developer",
+        name: "Python Entwickler",
         imgPath: "/images/logos/python.svg",
     },
     {
-        name: "Backend Developer",
+        name: "Backend Entwickler",
         imgPath: "/images/logos/node.png",
     },
     {
-        name: "Interactive Developer",
+        name: "3D Entwickler",
         imgPath: "/images/logos/three.png",
     },
     {
-        name: "Project Manager",
+        name: "Projektmanager",
         imgPath: "/images/logos/git.svg",
     },
 ];
 
 const techStackIcons = [
     {
-        name: "React Developer",
+        name: "React Entwickler",
         modelPath: "/models/react_logo-transformed.glb",
         scale: 1,
         rotation: [0, 0, 0],
     },
     {
-        name: "Python Developer",
+        name: "Python Entwickler",
         modelPath: "/models/python-transformed.glb",
         scale: 0.8,
         rotation: [0, 0, 0],
     },
     {
-        name: "Backend Developer",
+        name: "Backend Entwickler",
         modelPath: "/models/node-transformed.glb",
         scale: 5,
         rotation: [0, -Math.PI / 2, 0],
     },
     {
-        name: "Interactive Developer",
+        name: "3D Entwickler",
         modelPath: "/models/three.js-transformed.glb",
         scale: 0.05,
         rotation: [0, 0, 0],
     },
     {
-        name: "Project Manager",
+        name: "Projektmanager",
         modelPath: "/models/git-svg-transformed.glb",
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
@@ -148,41 +148,51 @@ const techStackIcons = [
 const expCards = [
     {
         review:
-            "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+        "Georgios hat durch seine technische Expertise unsere Infrastruktur stabilisiert und automatisiert. Seine Lösungen steigern Effizienz und Sicherheit signifikant.",
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
-        title: "Frontend Developer",
-        date: "January 2023 - Present",
+        title: "IT Adminmistrator",
+        date: "January 2023 - jetzt",
         responsibilities: [
-            "Developed and maintained user-facing features for the Hostinger website.",
-            "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-            "Optimized web applications for maximum speed and scalability.",
+            "Installation und Einrichtung von Software und Betriebssystemen.",
+            "Einrichtung von Geräten und IT-Infrastrukturen.",
+            "Administration und Wartung von Geräten und IT-Infrastrukturen.",
+            "Daten-/Anwendungsmigration.",
+            "Durchführung von Updates.",
+            "Zusammenbau von PC-Systemen.",
+            "Computer-Aufbauservice und Geräteeinweisung.",
+            "Anwenderunterstützung und Hilfe bei Problemen und Fragen.",
+            "Beratung zu Systemen oder Systemerweiterungen.",
         ],
     },
     {
         review:
-            "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+            "Dank Georgios konnten wir unsere Anwendungen effizienter skalieren und schneller ausliefern. Er ist ein verlässlicher Partner im DevOps-Team.",
         imgPath: "/images/exp2.png",
         logoPath: "/images/logo2.png",
-        title: "Full Stack Developer",
+        title: "Einzelhändler",
         date: "June 2020 - December 2023",
         responsibilities: [
-            "Led the development of Docker's web applications, focusing on scalability.",
-            "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-            "Contributed to open-source projects that were used with the Docker ecosystem.",
+            "Auftragsbearbeitung.",
+            "Rechnungsstellung.",
+            "Bearbeitung des Zahlungsverkehrs.",
+            "Dokumentation der Geschäftsvorfälle.",
+            "Kundenbetreuung.",
+            "Kassieren und Abrechnen.",
         ],
     },
     {
         review:
-            "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+            "Georgios entwickelte und betreute Python-Skripte zur Automatisierung von Prozessen, was die Produktivität stark erhöhte.",
         imgPath: "/images/exp3.png",
         logoPath: "/images/logo3.png",
-        title: "React Native Developer",
-        date: "March 2019 - May 2020",
+        title: "Sicherheitsenthusiast",
+        date: "March 2019 - jetzt",
         responsibilities: [
-            "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-            "Improved app performance and user experience through code optimization and testing.",
-            "Coordinated with the product team to implement features based on feedback.",
+            "Seit meiner Kindheit beschäftige ich mich intensiv mit IT – mittlerweile über 20 Jahre.",
+            "Mein Schwerpunkt liegt auf IT-Sicherheit und IT-Administration.",
+            "Als IT-Administrator in einem Unternehmen habe ich komplette IT-Infrastrukturen geplant, aufgebaut und betreut.",
+            "Ich bilde mich kontinuierlich im IT-Bereich weiter – sowohl theoretisch als auch praktisch.",
         ],
     },
 ];
@@ -207,8 +217,9 @@ const testimonials = [
         name: "Esther Howard",
         mentions: "@estherhoward",
         review:
-            "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+            "Georgios hat unsere Serverlandschaft sicherer gemacht und Prozesse automatisiert — schnelle und saubere Arbeit.",
         imgPath: "/images/client1.png",
+
     },
     {
         name: "Wade Warren",

@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-container">
                 <div className="flex flex-col justify-center md:items-start items-center">
-                    <a href="/">Visit my blog</a>
+                    <a href="/">Besuch mein GitHub Profil</a>
                 </div>
                 <div className="socials">
                     {socialImgs.map((img) => (
@@ -18,7 +18,7 @@ const Footer = () => {
 
                 <div className="flex flex-col justify-center">
                     <p className="text-center md:text-end">
-                        © {new Date().getFullYear()} GT All rights reserved.
+                        © {new Date().getFullYear()} Georgios Tertlidis | All rights reserved.
                     </p>
                 </div>
             </div>
