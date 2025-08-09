@@ -68,13 +68,13 @@ const Hero = () => {
                     </div>
                 </header>
 
-                {/*{Right, 3d Model}*/}
+                
                 <figure>
-                    <div className="hero-3d-layout xl:top-40 top-120">
-                        {/* asdfasdas */}
+                    <div className="hero-3d-layout xl:top-25 top-110">
                         <HeroExperience />
                     </div>
                 </figure>
+                
             </div>
 
             <AnimatedCounter />

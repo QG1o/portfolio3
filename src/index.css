@@ -490,3 +490,46 @@ section {
 .card:hover {
     --gradient: conic-gradient(from 0deg, #1762a5, #0427d9, #1762a5); /* beige Hover-Gradient */
 }
+
+/* Typing Effect Styles */
+.typing-text {
+  display: inline-block;
+  position: relative;
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: #e5e5e5;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Rainbow Text Effects */
+.rainbow-char {
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px currentColor;
+  animation: rainbowGlow 2s ease-in-out infinite;
+}
+
+.rainbow-char:hover {
+  transform: scale(3) rotate(15deg);
+  filter: brightness(1.5);
+}
+
+@keyframes rainbowGlow {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px currentColor);
+  }
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 15px currentColor);
+  }
+}

@@ -72,7 +72,7 @@ const ShowcaseSection = () => {
                                   <img src="/images/project22.png" alt="Library Management Platform" />
                               </a>
                           </div>
-                          <h2>Website 2</h2>
+                          <h2>Website 1</h2>
                       </div>
 
                       <div className="project" ref={project3Ref}>
@@ -81,7 +81,7 @@ const ShowcaseSection = () => {
                                   <img src="/images/project22.png" alt="YC Directory App" />
                               </a>
                           </div>
-                          <h2>Website 3</h2>
+                          <h2>Website 2</h2>
                       </div>
                   </div>
               </div>

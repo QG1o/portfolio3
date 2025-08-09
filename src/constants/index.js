@@ -29,11 +29,15 @@ const words = [
 ];
 
 const counterItems = [
-    { value: 15, suffix: "+", label: "Jahre Erfahrung" },
-    { value: 200, suffix: "+", label: "Projekte & Kunden" },
-    { value: 108, suffix: "+", label: "Erfolgreiche Deployments" },
-    { value: 90, suffix: "%", label: "Verfügbarkeit / SLA" },
-];
+    { value: "Windows & Linux", label: "Betriebssysteme & Plattformen" },
+    { value: "Bash, PowerShell", label: "CLI & Scripting" },
+    { value: "Python", label: "Programmiersprachen" },
+    { value: "React, Node.js, Three.js", label: "JS Frameworks & Libraries" },
+    { value: "Git", label: "DevOps & Tools" },
+    { value: "IT-Security", label: "IT-Sicherheit" },
+    { value: "HTML5, CSS3, JavaScript", label: "Web & Frontend" },
+    { value: "PHP, SQL", label: "Backend" },
+  ];
 
 const logoIconsList = [
     {
@@ -91,54 +95,54 @@ const abilities = [
 
 const techStackImgs = [
     {
-        name: "React Entwickler",
+        name: "React",
         imgPath: "/images/logos/react.png",
     },
     {
-        name: "Python Entwickler",
+        name: "Python",
         imgPath: "/images/logos/python.svg",
     },
     {
-        name: "Backend Entwickler",
+        name: "Node.js",
         imgPath: "/images/logos/node.png",
     },
     {
-        name: "3D Entwickler",
+        name: "Three.js",
         imgPath: "/images/logos/three.png",
     },
     {
-        name: "Projektmanager",
+        name: "Git",
         imgPath: "/images/logos/git.svg",
     },
 ];
 
 const techStackIcons = [
     {
-        name: "React Entwickler",
+        name: "React",
         modelPath: "/models/react_logo-transformed.glb",
         scale: 1,
         rotation: [0, 0, 0],
     },
     {
-        name: "Python Entwickler",
+        name: "Python",
         modelPath: "/models/python-transformed.glb",
         scale: 0.8,
         rotation: [0, 0, 0],
     },
     {
-        name: "Backend Entwickler",
+        name: "Node.js",
         modelPath: "/models/node-transformed.glb",
         scale: 5,
         rotation: [0, -Math.PI / 2, 0],
     },
     {
-        name: "3D Entwickler",
+        name: "Three.js",
         modelPath: "/models/three.js-transformed.glb",
         scale: 0.05,
         rotation: [0, 0, 0],
     },
     {
-        name: "Projektmanager",
+        name: "Git",
         modelPath: "/models/git-svg-transformed.glb",
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
@@ -148,11 +152,11 @@ const techStackIcons = [
 const expCards = [
     {
         review:
-        "Georgios hat durch seine technische Expertise unsere Infrastruktur stabilisiert und automatisiert. Seine Lösungen steigern Effizienz und Sicherheit signifikant.",
+        "Elektro Tertlidis GmbH",
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
         title: "IT Adminmistrator",
-        date: "January 2023 - jetzt",
+        date: "Januar 2019 - jetzt",
         responsibilities: [
             "Installation und Einrichtung von Software und Betriebssystemen.",
             "Einrichtung von Geräten und IT-Infrastrukturen.",
@@ -167,11 +171,11 @@ const expCards = [
     },
     {
         review:
-            "Dank Georgios konnten wir unsere Anwendungen effizienter skalieren und schneller ausliefern. Er ist ein verlässlicher Partner im DevOps-Team.",
+            "Elektro Tertlidis GmbH",
         imgPath: "/images/exp2.png",
         logoPath: "/images/logo2.png",
         title: "Einzelhändler",
-        date: "June 2020 - December 2023",
+        date: "Januar 2019 - jetzt",
         responsibilities: [
             "Auftragsbearbeitung.",
             "Rechnungsstellung.",
@@ -183,11 +187,11 @@ const expCards = [
     },
     {
         review:
-            "Georgios entwickelte und betreute Python-Skripte zur Automatisierung von Prozessen, was die Produktivität stark erhöhte.",
+            "IT-Admin & Security Hobbyist | CTF & Pentesting-Fan",
         imgPath: "/images/exp3.png",
         logoPath: "/images/logo3.png",
         title: "Sicherheitsenthusiast",
-        date: "March 2019 - jetzt",
+        date: "Januar 1995 - jetzt",
         responsibilities: [
             "Seit meiner Kindheit beschäftige ich mich intensiv mit IT – mittlerweile über 20 Jahre.",
             "Mein Schwerpunkt liegt auf IT-Sicherheit und IT-Administration.",
@@ -243,7 +247,7 @@ const testimonials = [
     },
     {
         name: "Bibel (Römer 12:2)",
-        mentions: "@bibel",
+        mentions: "@paulusvontarsus",
         review:
             "Und passt euch nicht dieser Welt an, sondern ändert euch durch Erneuerung eures Sinnes, damit ihr prüfen könnt, was der gute und wohlgefällige und vollkommene Wille Gottes ist.",
         imgPath: "/images/client4.png"
