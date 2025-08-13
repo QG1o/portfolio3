@@ -177,7 +177,7 @@ section {
         @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
 
         img {
-          @apply w-full h-full object-cover rounded-xl absolute inset-0;
+          @apply w-full h-full object-cover rounded-xl absolute inset-0 border-2 border-blue-900;
         }
       }
 
@@ -194,15 +194,15 @@ section {
       }
     }
 
-    .project-list-wrapper {
+      .project-list-wrapper {
       @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
 
       .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative xl:px-5 2xl:px-12 py-0;
       }
 
       img {
-        @apply w-full h-full object-contain rounded-xl;
+        @apply w-full h-full object-contain rounded-xl border-2 border-blue-900;
       }
 
       h2 {
@@ -250,7 +250,7 @@ section {
   }
 
   .glow-card {
-    @apply border border-black-50 bg-blue-900;
+    @apply border border-black-50 bg-blue-900/50;
     --start: 0;
     --gradient: conic-gradient(from 0deg, #c5a009, #e0d8b0, #c5a009);
     position: relative;
@@ -283,7 +283,7 @@ section {
     mask-clip: padding-box, border-box;
     opacity: 0;
     transition: 0.8s ease;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none;
   }
 

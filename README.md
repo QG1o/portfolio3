@@ -1,12 +1,52 @@
-# React + Vite
+# Georgios Tertlidis - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ein modernes, interaktives Portfolio mit React, Three.js und GSAP-Animationen.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **3D-Interaktionen** mit Three.js und React Three Fiber
+- **Smooth Animations** mit GSAP
+- **Responsive Design** mit Tailwind CSS
+- **Moderne UI/UX** mit Glassmorphism-Effekten
+- **Performance-optimiert** mit Vite
 
-## Expanding the ESLint configuration
+## 🛠️ Technologien
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React 19, Vite
+- **3D Graphics:** Three.js, React Three Fiber, Drei
+- **Animations:** GSAP, ScrollTrigger
+- **Styling:** Tailwind CSS
+- **Icons:** Custom SVG Icons
+
+## 📦 Installation
+
+```bash
+npm install
+npm run dev
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 📄 Lizenz
+
+© 2024 Georgios Tertlidis. Alle Rechte vorbehalten.
+
+### Verwendete Ressourcen
+
+- **Zitate:** Public Domain (antike Philosophie)
+- **Icons:** Custom erstellt
+- **3D Models:** Custom erstellt mit Three.js
+- **Fonts:** Google Fonts (Orbitron)
+
+## 🌐 Live Demo
+
+[Portfolio Website](https://qg1o.github.io/portfolio3/)
+
+## 📧 Kontakt
+
+- **GitHub:** [QG1o](https://github.com/QG1o)
+- **LinkedIn:** [Georgios Tertlidis](https://www.linkedin.com/in/georgiost/)

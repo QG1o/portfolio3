@@ -5,6 +5,7 @@
       <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
     </linearGradient>
   </defs>
+  <rect width="120" height="60" fill="#1a0b2e"/>
   <polygon points="60,0 80,30 60,60 40,30" fill="url(#logoGrad3)"/>
   <text x="60" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">DIGI</text>
 </svg>

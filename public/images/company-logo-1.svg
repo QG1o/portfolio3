@@ -5,6 +5,7 @@
       <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1" />
     </linearGradient>
   </defs>
+  <rect width="120" height="60" fill="#1a0b2e"/>
   <circle cx="60" cy="30" r="35" fill="url(#logoGrad1)"/>
   <text x="60" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">TECH</text>
 </svg>

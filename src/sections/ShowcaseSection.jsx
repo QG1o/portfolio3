@@ -53,11 +53,11 @@ const ShowcaseSection = () => {
                   <div className="first-project-wrapper" ref={project1Ref}>
                       <div className="image-wrapper">
                           <a href="https://qg1o.github.io/portfolio2/" target="_blank" rel="noopener noreferrer">
-                              <img src="/images/project11.png" alt="Ryde App Interface" />
+                              <img src="/images/project11.png" alt="" />
                           </a>
                       </div>
                       <div className="text-content">
-                          <h2>Portfolio 1</h2>
+                          <h2>Website</h2>
                           <p className="text-white-50 md:text-xl">
                               Persönliche Portfolio-Webseite zur Präsentation von Fähigkeiten und Projekten.
                           </p>
@@ -66,22 +66,22 @@ const ShowcaseSection = () => {
 
                   {/* RIGHT */}
                   <div className="project-list-wrapper overflow-hidden">
-                      <div className="project" ref={project2Ref}>
-                          <div className="image-wrapper bg-[#5fefdb]">
+                                             <div className="project" ref={project2Ref}>
+                          <div className="image-wrapper">
                               <a href="https://qg1o.github.io/portfolio1/" target="_blank" rel="noopener noreferrer">
-                                  <img src="/images/project22.png" alt="Library Management Platform" />
+                                  <img src="/images/project33.png" alt="" />
                               </a>
                           </div>
-                          <h2>Website 1</h2>
+                                                     <h2 className="ml-8">Website 2</h2>
                       </div>
 
                       <div className="project" ref={project3Ref}>
-                          <div className="image-wrapper bg-[#fe7feb]">
+                          <div className="image-wrapper">
                               <a href="https://qg1o.github.io/portfolio3/" target="_blank" rel="noopener noreferrer">
-                                  <img src="/images/project22.png" alt="YC Directory App" />
+                                  <img src="/images/project22.png" alt="" />
                               </a>
                           </div>
-                          <h2>Website 2</h2>
+                                                     <h2 className="ml-8">Website 3</h2>
                       </div>
                   </div>
               </div>

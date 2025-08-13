@@ -63,6 +63,21 @@ const logoIconsList = [
     {
         imgPath: "/images/bibel.png",
     },
+    {
+        imgPath: "/images/seneca.png",
+    },
+    {
+        imgPath: "/images/marcusaurelius.png",
+    },
+    {
+        imgPath: "/images/buddha.png",
+    },
+    {
+        imgPath: "/images/epiktet.png",
+    },
+    {
+        imgPath: "/images/bibel.png",
+    },
   
 ];
 

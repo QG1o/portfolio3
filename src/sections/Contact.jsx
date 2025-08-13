@@ -21,7 +21,17 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
+        
+        // Optional: Hier können Sie später Formspree oder Netlify Forms hinzufügen
+        // Beispiel für Formspree:
+        // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData)
+        // });
+        
         setFormData({name: '', email: '', message: ''});
+        alert('Nachricht gesendet! (Demo-Modus)');
     };
 
     return (

@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { Room } from './room';
 import HeroLights from './HeroLights';
-import Particles from './Particles';
+import FloatingBubbles from './FloatingBubbles';
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 1024px' });
@@ -30,7 +30,7 @@ const HeroExperience = () => {
         
       <HeroLights />
 
-      <Particles count={100} />
+      <FloatingBubbles count={50} />
 
 
         <group
