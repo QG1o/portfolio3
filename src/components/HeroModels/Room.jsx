@@ -4,174 +4,177 @@ Command: npx gltfjsx@6.5.3 optimized-room.glb
 */
 
 import React, { useRef } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
 export function Room(props) {
-  const { nodes, materials } = useGLTF("/models/optimized-room.glb");
+  const robotRef = useRef();
   const screensRef = useRef();
-  const matcapTexture = useTexture("/images/textures/mat1.png");
 
-  const curtainMaterial = new THREE.MeshPhongMaterial({
-    color: "#0427d9",
-  });
-
-  const bodyMaterial = new THREE.MeshPhongMaterial({
-    map: matcapTexture,
-  });
-
-  const tableMaterial = new THREE.MeshPhongMaterial({
-    color: "#582f0e",
-  });
-
-  const radiatorMaterial = new THREE.MeshPhongMaterial({
-    color: "#fff",
-  });
-
-  const compMaterial = new THREE.MeshStandardMaterial({
-    color: "#fff",
-  });
-
-  const pillowMaterial = new THREE.MeshPhongMaterial({
-    color: "#8338ec",
-  });
-
-  const chairMaterial = new THREE.MeshPhongMaterial({
-    color: "#000",
+  useFrame((state) => {
+    if (robotRef.current) {
+      robotRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.3) * 0.2;
+      robotRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.05;
+    }
   });
 
   return (
     <group {...props} dispose={null}>
+      {/* Invisible collision sphere for better OrbitControls interaction */}
+      <mesh position={[0, 1, 0]} visible={false}>
+        <sphereGeometry args={[3, 16, 16]} />
+        <meshBasicMaterial transparent opacity={0} />
+      </mesh>
+
       <EffectComposer>
         <SelectiveBloom
           selection={screensRef}
-          intensity={0.1} // Strength of the bloom
-          luminanceThreshold={0.2} // Minimum luminance needed
-          luminanceSmoothing={0.9} // Smooth transition
-          blendFunction={BlendFunction.ADD} // How it blends
+          intensity={0.3}
+          luminanceThreshold={0.2}
+          luminanceSmoothing={0.9}
+          blendFunction={BlendFunction.ADD}
         />
       </EffectComposer>
-      <mesh
-        geometry={nodes._________6_blinn1_0.geometry}
-        material={curtainMaterial}
-      />
-      <mesh geometry={nodes.body1_blinn1_0.geometry} material={bodyMaterial} />
-      <mesh geometry={nodes.cabin_blinn1_0.geometry} material={tableMaterial} />
-      <mesh
-        geometry={nodes.chair_body_blinn1_0.geometry}
-        material={chairMaterial}
-      />
-      <mesh geometry={nodes.comp_blinn1_0.geometry} material={compMaterial} />
-      <mesh
-        ref={screensRef}
-        geometry={nodes.emis_lambert1_0.geometry}
-        material={materials.lambert1}
-      />
-      <mesh
-        geometry={nodes.handls_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.keyboard_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.kovrik_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.lamp_bl_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.lamp_white_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.miuse_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.monitor2_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.monitor3_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.pCylinder5_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.pillows_blinn1_0.geometry}
-        material={pillowMaterial}
-      />
-      <mesh
-        geometry={nodes.polySurface53_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.radiator_blinn1_0.geometry}
-        material={radiatorMaterial}
-      />
-      <mesh
-        geometry={nodes.radiator_blinn1_0001.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.railing_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.red_bttns_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.red_vac_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.stylus_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh geometry={nodes.table_blinn1_0.geometry} material={tableMaterial} />
-      <mesh
-        geometry={nodes.tablet_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.triangle_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.vac_black_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.vacuum1_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.vacuumgrey_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.vires_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.window_blinn1_0.geometry}
-        material={materials.blinn1}
-      />
-      <mesh
-        geometry={nodes.window4_phong1_0.geometry}
-        material={materials.phong1}
-      />
+
+      {/* Robot Body */}
+      <group ref={robotRef} position={[0, 0, 0]}>
+        
+        {/* Robot Head */}
+        <mesh position={[0, 1.2, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.4, 0.4, 0.4]} />
+          <meshStandardMaterial color="#444444" />
+        </mesh>
+        
+        {/* Robot Eyes */}
+        <mesh position={[0.1, 1.25, 0.21]} castShadow receiveShadow>
+          <sphereGeometry args={[0.05, 16, 16]} />
+          <meshStandardMaterial color="#00ff00" emissive="#00ff00" emissiveIntensity={0.5} />
+        </mesh>
+        <mesh position={[-0.1, 1.25, 0.21]} castShadow receiveShadow>
+          <sphereGeometry args={[0.05, 16, 16]} />
+          <meshStandardMaterial color="#00ff00" emissive="#00ff00" emissiveIntensity={0.5} />
+        </mesh>
+        
+        {/* Robot Torso */}
+        <mesh position={[0, 0.8, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.6, 0.8, 0.3]} />
+          <meshStandardMaterial color="#666666" />
+        </mesh>
+        
+        {/* Robot Arms */}
+        <mesh position={[0.45, 0.8, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.1, 0.6, 0.1]} />
+          <meshStandardMaterial color="#555555" />
+        </mesh>
+        <mesh position={[-0.45, 0.8, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.1, 0.6, 0.1]} />
+          <meshStandardMaterial color="#555555" />
+        </mesh>
+        
+        {/* Robot Hands */}
+        <mesh position={[0.5, 0.5, 0]} castShadow receiveShadow>
+          <sphereGeometry args={[0.08, 16, 16]} />
+          <meshStandardMaterial color="#777777" />
+        </mesh>
+        <mesh position={[-0.5, 0.5, 0]} castShadow receiveShadow>
+          <sphereGeometry args={[0.08, 16, 16]} />
+          <meshStandardMaterial color="#777777" />
+        </mesh>
+        
+        {/* Robot Legs */}
+        <mesh position={[0.15, 0.2, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.15, 0.4, 0.15]} />
+          <meshStandardMaterial color="#555555" />
+        </mesh>
+        <mesh position={[-0.15, 0.2, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.15, 0.4, 0.15]} />
+          <meshStandardMaterial color="#555555" />
+        </mesh>
+        
+        {/* Robot Feet */}
+        <mesh position={[0.15, 0, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.2, 0.1, 0.25]} />
+          <meshStandardMaterial color="#333333" />
+        </mesh>
+        <mesh position={[-0.15, 0, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.2, 0.1, 0.25]} />
+          <meshStandardMaterial color="#333333" />
+        </mesh>
+      </group>
+
+      {/* Work Desk */}
+      <mesh position={[0, -0.3, 0]} castShadow receiveShadow>
+        <boxGeometry args={[3, 0.1, 1.5]} />
+        <meshStandardMaterial color="#8B4513" />
+      </mesh>
+
+      {/* Computer Setup */}
+      <group position={[0.8, 0, 0]}>
+        {/* Monitor */}
+        <mesh position={[0, 0.3, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.8, 0.6, 0.05]} />
+          <meshStandardMaterial color="#2a2a2a" />
+        </mesh>
+        
+        {/* Monitor Stand */}
+        <mesh position={[0, 0, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.05, 0.3, 0.05]} />
+          <meshStandardMaterial color="#1a1a1a" />
+        </mesh>
+        
+        {/* Screen */}
+        <mesh 
+          ref={screensRef}
+          position={[0, 0.3, 0.03]} 
+          castShadow 
+          receiveShadow
+        >
+          <boxGeometry args={[0.75, 0.55, 0.01]} />
+          <meshStandardMaterial color="#0066ff" emissive="#0066ff" emissiveIntensity={0.4} />
+        </mesh>
+        
+        {/* Keyboard */}
+        <mesh position={[0, -0.1, 0.2]} castShadow receiveShadow>
+          <boxGeometry args={[0.6, 0.03, 0.2]} />
+          <meshStandardMaterial color="#333333" />
+        </mesh>
+      </group>
+
+      {/* Floating Holographic Display */}
+      <group position={[-0.8, 0.5, 0]}>
+        <mesh position={[0, 0, 0]} castShadow receiveShadow>
+          <cylinderGeometry args={[0.3, 0.3, 0.02, 32]} />
+          <meshStandardMaterial color="#00ffff" emissive="#00ffff" emissiveIntensity={0.3} transparent opacity={0.7} />
+        </mesh>
+        
+        {/* Holographic Data Lines */}
+        <mesh position={[0, 0.1, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.5, 0.01, 0.01]} />
+          <meshStandardMaterial color="#00ffff" emissive="#00ffff" emissiveIntensity={0.8} />
+        </mesh>
+        <mesh position={[0, 0.05, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.4, 0.01, 0.01]} />
+          <meshStandardMaterial color="#00ffff" emissive="#00ffff" emissiveIntensity={0.6} />
+        </mesh>
+        <mesh position={[0, 0, 0]} castShadow receiveShadow>
+          <boxGeometry args={[0.3, 0.01, 0.01]} />
+          <meshStandardMaterial color="#00ffff" emissive="#00ffff" emissiveIntensity={0.4} />
+        </mesh>
+      </group>
+
+      {/* Floor */}
+      <mesh position={[0, -0.5, 0]} castShadow receiveShadow>
+        <boxGeometry args={[4, 0.1, 4]} />
+        <meshStandardMaterial color="#e0e0e0" />
+      </mesh>
+
+      {/* Ceiling */}
+      <mesh position={[0, 2.5, 0]} castShadow receiveShadow>
+        <boxGeometry args={[4, 0.1, 4]} />
+        <meshStandardMaterial color="#f8f8f8" />
+      </mesh>
     </group>
   );
 }
-
-useGLTF.preload("/models/optimized-room.glb");

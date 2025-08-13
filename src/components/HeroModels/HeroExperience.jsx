@@ -9,8 +9,12 @@ const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 1024px' });
   const isMobile = useMediaQuery({ query: '(max-width: 768px '});
 
+
+
     return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas 
+      camera={{ position: [0, 0, 15], fov: 45 }}
+    >
         <OrbitControls
             enablePan={false}
             enableZoom={!isTablet}
@@ -18,6 +22,10 @@ const HeroExperience = () => {
             minDistance={5}
             minPolarAngle={Math.PI / 5}
             maxPolarAngle={Math.PI / 2}
+            enableDamping={true}
+            dampingFactor={0.05}
+            rotateSpeed={0.8}
+            target={[0, 0, 0]}
         />
         
       <HeroLights />

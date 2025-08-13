@@ -27,7 +27,7 @@ const ContactExperience = () => {
                 maxPolarAngle={Math.PI / 2} // ✅ Typo korrigiert
             />
 
-            <group scale={0.03} position={[0, -1.5, -2]} castShadow>
+            <group position={[0, -1.5, -2]} castShadow>
                 <Computer />
             </group>
 

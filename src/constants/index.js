@@ -18,6 +18,14 @@ const navLinks = [
 ];
 
 const words = [
+    { text: "Sysadmin", imgPath: "/images/sysadmin.svg" },
+    { text: "IT-Sicherheit", imgPath: "/images/security.svg" },
+    { text: "Automatisierung", imgPath: "/images/automation.svg" },
+    { text: "Python-Scripting", imgPath: "/images/python.svg" },
+    { text: "React.js", imgPath: "/images/react.svg" },
+    { text: "DevOps Tools", imgPath: "/images/devops.svg" },
+    { text: "Bash Scripting", imgPath: "/images/bash.svg" },
+    { text: "Active Directory", imgPath: "/images/active-directory.svg" },
     { text: "Sysadmin", imgPath: "/images/ideas.svg" },
     { text: "IT-Sicherheit", imgPath: "/images/concepts.svg" },
     { text: "Automatisierung", imgPath: "/images/designs.svg" },
@@ -41,53 +49,36 @@ const counterItems = [
 
 const logoIconsList = [
     {
-        imgPath: "/images/logos/company-logo-1.png",
+        imgPath: "/images/seneca.png",
     },
     {
-        imgPath: "/images/logos/company-logo-2.png",
+        imgPath: "/images/marcusaurelius.png",
     },
     {
-        imgPath: "/images/logos/company-logo-3.png",
+        imgPath: "/images/buddha.png",
     },
     {
-        imgPath: "/images/logos/company-logo-4.png",
+        imgPath: "/images/epiktet.png",
     },
     {
-        imgPath: "/images/logos/company-logo-5.png",
+        imgPath: "/images/bibel.png",
     },
-    {
-        imgPath: "/images/logos/company-logo-6.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-7.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-8.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-9.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-10.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-11.png",
-    },
+  
 ];
 
 const abilities = [
     {
-        imgPath: "/images/seo.png",
+        imgPath: "/images/quality.svg",
         title: "Qualitätsorientiert",
         desc: "Konsequent hochwertige Ergebnisse mit Liebe zum Detail liefern.",
     },
     {
-        imgPath: "/images/chat.png",
+        imgPath: "/images/communication.svg",
         title: "Zuverlässige Kommunikation",
         desc: "Transparente Updates während des gesamten Projekts sicherstellen.",
     },
     {
-        imgPath: "/images/time.png",
+        imgPath: "/images/deadline.svg",
         title: "Termintreue",
         desc: "Projekte immer fristgerecht mit hoher Qualität abschließen.",
     },
@@ -96,7 +87,7 @@ const abilities = [
 const techStackImgs = [
     {
         name: "React",
-        imgPath: "/images/logos/react.png",
+        imgPath: "/images/logos/react.svg",
     },
     {
         name: "Python",
@@ -104,11 +95,11 @@ const techStackImgs = [
     },
     {
         name: "Node.js",
-        imgPath: "/images/logos/node.png",
+        imgPath: "/images/logos/node.svg",
     },
     {
         name: "Three.js",
-        imgPath: "/images/logos/three.png",
+        imgPath: "/images/logos/three.svg",
     },
     {
         name: "Git",
@@ -119,33 +110,28 @@ const techStackImgs = [
 const techStackIcons = [
     {
         name: "React",
-        modelPath: "/models/react_logo-transformed.glb",
-        scale: 1,
+        scale: 2.8,
         rotation: [0, 0, 0],
     },
     {
         name: "Python",
-        modelPath: "/models/python-transformed.glb",
-        scale: 0.8,
+        scale: 2.6,
         rotation: [0, 0, 0],
     },
     {
         name: "Node.js",
-        modelPath: "/models/node-transformed.glb",
-        scale: 5,
-        rotation: [0, -Math.PI / 2, 0],
+        scale: 2.8,
+        rotation: [0, 0, 0],
     },
     {
         name: "Three.js",
-        modelPath: "/models/three.js-transformed.glb",
-        scale: 0.05,
+        scale: 2.8,
         rotation: [0, 0, 0],
     },
     {
         name: "Git",
-        modelPath: "/models/git-svg-transformed.glb",
-        scale: 0.05,
-        rotation: [0, -Math.PI / 4, 0],
+        scale: 2.8,
+        rotation: [0, 0, 0],
     },
 ];
 
@@ -153,8 +139,8 @@ const expCards = [
     {
         review:
         "Elektro Tertlidis GmbH",
-        imgPath: "/images/exp1.png",
-        logoPath: "/images/logo1.png",
+        imgPath: "/images/exp1-logo.svg",
+        logoPath: "/images/company-logo-1.svg",
         title: "IT Adminmistrator",
         date: "Januar 2019 - jetzt",
         responsibilities: [
@@ -172,8 +158,8 @@ const expCards = [
     {
         review:
             "Elektro Tertlidis GmbH",
-        imgPath: "/images/exp2.png",
-        logoPath: "/images/logo2.png",
+        imgPath: "/images/exp2-logo.svg",
+        logoPath: "/images/company-logo-2.svg",
         title: "Einzelhändler",
         date: "Januar 2019 - jetzt",
         responsibilities: [
@@ -188,8 +174,8 @@ const expCards = [
     {
         review:
             "IT-Admin & Security Hobbyist | CTF & Pentesting-Fan",
-        imgPath: "/images/exp3.png",
-        logoPath: "/images/logo3.png",
+        imgPath: "/images/exp3-logo.svg",
+        logoPath: "/images/company-logo-3.svg",
         title: "Sicherheitsenthusiast",
         date: "Januar 1995 - jetzt",
         responsibilities: [
@@ -204,15 +190,15 @@ const expCards = [
 const expLogos = [
     {
         name: "logo1",
-        imgPath: "/images/logo1.png",
+        imgPath: "/images/company-logo-1.svg",
     },
     {
         name: "logo2",
-        imgPath: "/images/logo2.png",
+        imgPath: "/images/company-logo-2.svg",
     },
     {
         name: "logo3",
-        imgPath: "/images/logo3.png",
+        imgPath: "/images/company-logo-3.svg",
     },
 ];
 
@@ -222,42 +208,42 @@ const testimonials = [
         mentions: "@epiktet",
         review:
             "Nicht die Dinge selbst beunruhigen die Menschen, sondern die Meinungen und Urteile über die Dinge.",
-        imgPath: "/images/client1.png"
+        imgPath: "/images/epiktet.png"
     },
     {
         name: "Marcus Aurelius (Meditationen, Buch 5, Abschnitt 16)",
         mentions: "@marcusaurelius",
         review:
             "Die Seele wird durch den Gedanken, den sie wählt, geformt. Wähle gute Gedanken.",
-        imgPath: "/images/client2.png"
+        imgPath: "/images/marcusaurelius.png"
     },
     {
         name: "Buddha (Dhammapada, Vers 1)",
         mentions: "@buddha",
         review:
             "Alle Dinge entstehen durch den Geist. Wenn ein Mensch mit reinem Geist spricht oder handelt, folgt ihm das Glück wie sein Schatten.",
-        imgPath: "/images/client3.png"
+        imgPath: "/images/buddha.png"
     },
     {
         name: "Seneca (Briefe an Lucilius, Brief 113, Abschnitt 29)",
         mentions: "@seneca",
         review:
             "Beherrsche deinen Geist, und du wirst stärker sein als der, der Städte erobert.",
-        imgPath: "/images/client5.png"
+        imgPath: "/images/seneca.png"
     },
     {
         name: "Bibel (Römer 12:2)",
         mentions: "@paulusvontarsus",
         review:
             "Und passt euch nicht dieser Welt an, sondern ändert euch durch Erneuerung eures Sinnes, damit ihr prüfen könnt, was der gute und wohlgefällige und vollkommene Wille Gottes ist.",
-        imgPath: "/images/client4.png"
+        imgPath: "/images/bibel.png"
     },
     {
         name: "Seneca (De Ira, Buch 2, Abschnitt 36)",
         mentions: "@seneca",
         review:
             "Lenke deine Gedanken auf das Gute, und dein Geist wird zur Festung des Friedens.",
-        imgPath: "/images/client6.png"
+        imgPath: "/images/seneca.png"
     },
 ];
 
