@@ -9,7 +9,7 @@ html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: #1a0b2e;
+  background-color: #0a0e27;
   color: white;
   scroll-behavior: smooth;
   font-family: "Orbitron", monospace;
@@ -124,7 +124,7 @@ section {
       }
 
       .logo:hover {
-          color: #a62396;
+          color: #00d4ff;
       }
 
     nav.desktop {
@@ -140,7 +140,7 @@ section {
             @apply transition-colors duration-300;
           }
              span:hover {
-                color: #a62396;
+                color: #00d4ff;
             }
 
           .underline {
@@ -221,7 +221,7 @@ section {
     /* asdasdas */
 
       &:hover {
-          background-color: #a62396;
+          background-color: #00d4ff;
       }
 
     .bg-circle {
@@ -315,7 +315,7 @@ section {
 
   .timeline {
     @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28;
-    background: #1a0b2e;
+    background: #0a0e27;
   }
 
   .timeline-logo {
@@ -338,7 +338,7 @@ section {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center group-hover:text-[#a62396];
+      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center group-hover:text-[#00d4ff];
     }
   }
 
@@ -452,7 +452,7 @@ section {
   left: 0;
   background: linear-gradient(
     90deg,
-    rgba(26, 11, 46, 1) 0%,
+    rgba(10, 14, 39, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -460,7 +460,7 @@ section {
   right: 0;
   background: linear-gradient(
     -90deg,
-    rgba(26, 11, 46, 1) 0%,
+    rgba(10, 14, 39, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
