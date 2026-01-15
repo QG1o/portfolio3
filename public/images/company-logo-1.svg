@@ -1,11 +1,42 @@
 <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1" />
+    <linearGradient id="itGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0088cc;stop-opacity:1" />
     </linearGradient>
+    <filter id="logoGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="120" height="60" fill="#1a0b2e"/>
-  <circle cx="60" cy="30" r="35" fill="url(#logoGrad1)"/>
-  <text x="60" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">TECH</text>
+
+  <!-- Background -->
+  <rect width="120" height="60" rx="8" fill="#0a0e27"/>
+
+  <!-- Server Icon -->
+  <g transform="translate(20, 15)">
+    <!-- Server rack -->
+    <rect x="0" y="0" width="30" height="10" rx="2" fill="url(#itGrad)" filter="url(#logoGlow)" opacity="0.9"/>
+    <rect x="0" y="12" width="30" height="10" rx="2" fill="url(#itGrad)" filter="url(#logoGlow)" opacity="0.9"/>
+    <rect x="0" y="24" width="30" height="10" rx="2" fill="url(#itGrad)" filter="url(#logoGlow)" opacity="0.9"/>
+
+    <!-- Server lights -->
+    <circle cx="4" cy="5" r="1.5" fill="#00ff88" opacity="0.8"/>
+    <circle cx="8" cy="5" r="1.5" fill="#00ff88" opacity="0.8"/>
+    <circle cx="4" cy="17" r="1.5" fill="#00ff88" opacity="0.8"/>
+    <circle cx="8" cy="17" r="1.5" fill="#00ff88" opacity="0.8"/>
+    <circle cx="4" cy="29" r="1.5" fill="#00d4ff" opacity="0.8"/>
+    <circle cx="8" cy="29" r="1.5" fill="#00d4ff" opacity="0.8"/>
+  </g>
+
+  <!-- IT ADMIN text -->
+  <text x="57" y="22" font-family="Orbitron, monospace" font-size="10" font-weight="bold" fill="#00d4ff">IT</text>
+  <text x="57" y="35" font-family="Orbitron, monospace" font-size="8" font-weight="normal" fill="#0088cc">ADMIN</text>
+
+  <!-- Network connection indicator -->
+  <line x1="50" y1="20" x2="55" y2="20" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <circle cx="52.5" cy="20" r="1" fill="#00d4ff" opacity="0.8"/>
 </svg>
