@@ -102,6 +102,50 @@ section {
     @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0 z-0;
   }
 
+  .profile-image-wrapper {
+    @apply relative;
+    width: 400px;
+    height: 400px;
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+
+  .profile-image {
+    @apply w-full h-full object-cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.4),
+                0 0 80px rgba(0, 212, 255, 0.2),
+                inset 0 0 20px rgba(0, 212, 255, 0.1);
+    border: 3px solid rgba(0, 212, 255, 0.5);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: brightness(1) contrast(1.1);
+  }
+
+  .profile-image:hover {
+    border-radius: 50%;
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 60px rgba(0, 212, 255, 0.6),
+                0 0 120px rgba(0, 212, 255, 0.3),
+                inset 0 0 30px rgba(0, 212, 255, 0.2);
+    border-color: rgba(0, 212, 255, 0.8);
+    filter: brightness(1.1) contrast(1.15);
+  }
+
+  /* Responsive sizing */
+  @media (max-width: 1024px) {
+    .profile-image-wrapper {
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .profile-image-wrapper {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
