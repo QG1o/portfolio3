@@ -12,6 +12,7 @@ body {
   background-color: #0a0e27;
   color: white;
   scroll-behavior: smooth;
+  scroll-padding-top: 120px;
   font-family: "Orbitron", monospace;
 }
 
