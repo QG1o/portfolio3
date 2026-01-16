@@ -76,7 +76,7 @@ const Hero = () => {
                     </div>
 
                     {/* Profile Image - darunter */}
-                    <div className="absolute inset-0 z-10 flex items-center justify-center xl:justify-end xl:pr-20">
+                    <div className="absolute inset-0 z-10 flex items-center justify-center">
                         <div className="profile-image-wrapper">
                             <img
                                 src="/images/profile.png"
