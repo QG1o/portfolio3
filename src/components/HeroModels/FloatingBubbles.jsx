@@ -14,7 +14,7 @@ const FloatingBubbles = ({ count = 50 }) => {
           Math.random() * 15 - 5,
           (Math.random() - 0.5) * 20,
         ],
-        scale: 0.2 + Math.random() * 0.5,
+        scale: 0.1 + Math.random() * 0.3,
         speed: 0.002 + Math.random() * 0.003,
         rotationSpeed: (Math.random() - 0.5) * 0.02,
       });
@@ -46,13 +46,11 @@ const FloatingBubbles = ({ count = 50 }) => {
         <mesh key={i} position={bubble.position} scale={bubble.scale}>
           <sphereGeometry args={[1, 16, 16]} />
           <meshStandardMaterial
-            color="#00d4ff"
-            emissive="#00d4ff"
-            emissiveIntensity={0.5}
+            color="#4a90e2"
             transparent
-            opacity={0.7}
-            metalness={0.9}
-            roughness={0.1}
+            opacity={0.3}
+            metalness={0.8}
+            roughness={0.2}
           />
         </mesh>
       ))}
