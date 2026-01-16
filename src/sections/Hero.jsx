@@ -68,13 +68,25 @@ const Hero = () => {
                     </div>
                 </header>
 
-                
-                <figure>
-                    <div className="hero-3d-layout xl:top-25 top-110">
+
+                <figure className="hero-3d-layout">
+                    {/* Floating Bubbles Layer - über allem */}
+                    <div className="absolute inset-0 z-20 pointer-events-none">
                         <HeroExperience />
                     </div>
+
+                    {/* Profile Image - darunter */}
+                    <div className="absolute inset-0 z-10 flex items-center justify-center xl:justify-end xl:pr-20">
+                        <div className="profile-image-wrapper">
+                            <img
+                                src="/images/profile.png"
+                                alt="QG1o Profile"
+                                className="profile-image"
+                            />
+                        </div>
+                    </div>
                 </figure>
-                
+
             </div>
 
             <AnimatedCounter />
