@@ -38,7 +38,6 @@ npm run build
 ### Verwendete Ressourcen
 
 - **Zitate:** Public Domain (antike Philosophie)
-- **Icons:** Custom erstellt
 - **3D Models:** Custom erstellt mit Three.js
 - **Fonts:** Google Fonts (Orbitron)
 
