@@ -2,6 +2,12 @@ import { useRef } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 
+/**
+ * Render a rotating 3D plane that displays the official Three.js logo.
+ *
+ * @param {Object} props - Props forwarded to the root <group> (applies to React Three Fiber group).
+ * @returns {JSX.Element} A group containing a textured plane mesh with the Three.js logo and continuous Y-axis rotation.
+ */
 export default function ThreeLogo(props) {
     const groupRef = useRef();
     const texture = useLoader(TextureLoader, "/images/logos/three.svg");

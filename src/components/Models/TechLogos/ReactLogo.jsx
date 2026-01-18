@@ -2,6 +2,12 @@ import { useRef } from "react";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 
+/**
+ * Renders the official React logo on a 2x2 textured plane and continuously rotates the containing group around the Y axis.
+ *
+ * @param {object} props - Props spread onto the root <group> element.
+ * @returns {JSX.Element} The 3D group containing the textured plane mesh.
+ */
 export default function ReactLogo(props) {
     const groupRef = useRef();
     const texture = useLoader(TextureLoader, "/images/logos/react.svg");
