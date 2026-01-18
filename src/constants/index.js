@@ -153,7 +153,7 @@ const techStackIcons = [
 const expCards = [
     {
         review:
-        "QG1o",
+        "IT Administrator",
         imgPath: "/images/exp1-logo.svg",
         logoPath: "/images/company-logo-1.svg",
         title: "IT Adminmistrator",
@@ -172,7 +172,7 @@ const expCards = [
     },
     {
         review:
-            "QG1o",
+            "Einzelhändler",
         imgPath: "/images/exp2-logo.svg",
         logoPath: "/images/company-logo-2.svg",
         title: "Einzelhändler",
@@ -188,7 +188,7 @@ const expCards = [
     },
     {
         review:
-            "IT-Admin & Security Hobbyist | CTF & Pentesting-Fan",
+            "Sicherheitsenthusiast",
         imgPath: "/images/exp3-logo.svg",
         logoPath: "/images/company-logo-3.svg",
         title: "Sicherheitsenthusiast",

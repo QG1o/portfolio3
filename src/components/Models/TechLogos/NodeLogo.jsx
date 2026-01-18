@@ -1,57 +1,29 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
 
 export default function NodeLogo(props) {
     const groupRef = useRef();
+    const texture = useLoader(TextureLoader, "/images/logos/node.svg");
 
     useFrame((state) => {
         if (groupRef.current) {
-            groupRef.current.rotation.y += 0.008;
+            groupRef.current.rotation.y += 0.01;
         }
     });
 
     return (
         <group {...props} ref={groupRef} dispose={null}>
-            {/* Node.js Hexagon Base */}
+            {/* Official Node.js Logo on 3D Plane */}
             <mesh position={[0, 0, 0]} castShadow receiveShadow>
-                <cylinderGeometry args={[0.6, 0.6, 0.1, 6]} />
-                <meshStandardMaterial color="#339933" emissive="#339933" emissiveIntensity={0.2} />
-            </mesh>
-
-            {/* Node.js Hexagon Top */}
-            <mesh position={[0, 0, 0.05]} castShadow receiveShadow>
-                <cylinderGeometry args={[0.5, 0.5, 0.1, 6]} />
-                <meshStandardMaterial color="#339933" emissive="#339933" emissiveIntensity={0.2} />
-            </mesh>
-
-            {/* Node.js Hexagon Bottom */}
-            <mesh position={[0, 0, -0.05]} castShadow receiveShadow>
-                <cylinderGeometry args={[0.5, 0.5, 0.1, 6]} />
-                <meshStandardMaterial color="#339933" emissive="#339933" emissiveIntensity={0.2} />
-            </mesh>
-
-            {/* Node.js Inner Circle */}
-            <mesh position={[0, 0, 0.1]} castShadow receiveShadow>
-                <cylinderGeometry args={[0.3, 0.3, 0.05, 32]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.1} />
-            </mesh>
-
-            {/* Node.js Inner Circle Bottom */}
-            <mesh position={[0, 0, -0.1]} castShadow receiveShadow>
-                <cylinderGeometry args={[0.3, 0.3, 0.05, 32]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.1} />
-            </mesh>
-
-            {/* Node.js Center Dot */}
-            <mesh position={[0, 0, 0.15]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 16, 16]} />
-                <meshStandardMaterial color="#339933" emissive="#339933" emissiveIntensity={0.3} />
-            </mesh>
-
-            {/* Node.js Center Dot Bottom */}
-            <mesh position={[0, 0, -0.15]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 16, 16]} />
-                <meshStandardMaterial color="#339933" emissive="#339933" emissiveIntensity={0.3} />
+                <planeGeometry args={[2, 2]} />
+                <meshStandardMaterial
+                    map={texture}
+                    transparent={true}
+                    opacity={1}
+                    roughness={0.3}
+                    metalness={0.2}
+                />
             </mesh>
         </group>
     );

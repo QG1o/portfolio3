@@ -104,7 +104,7 @@ section {
   }
 
   .profile-image-wrapper {
-    @apply relative;
+    @apply relative hidden md:block;
     width: 400px;
     height: 400px;
     max-width: 90vw;
