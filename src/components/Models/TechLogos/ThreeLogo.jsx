@@ -1,8 +1,10 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
 
 export default function ThreeLogo(props) {
     const groupRef = useRef();
+    const texture = useLoader(TextureLoader, "/images/logos/three.svg");
 
     useFrame((state) => {
         if (groupRef.current) {
@@ -12,63 +14,16 @@ export default function ThreeLogo(props) {
 
     return (
         <group {...props} ref={groupRef} dispose={null}>
-            {/* Three.js Cube */}
+            {/* Official Three.js Logo on 3D Plane */}
             <mesh position={[0, 0, 0]} castShadow receiveShadow>
-                <boxGeometry args={[1, 1, 1]} />
-                <meshStandardMaterial color="#000000" emissive="#000000" emissiveIntensity={0.1} />
-            </mesh>
-
-            {/* Three.js Cube Wireframe Edges */}
-            <mesh position={[0, 0, 0]} castShadow receiveShadow>
-                <boxGeometry args={[1.1, 1.1, 1.1]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} wireframe={true} />
-            </mesh>
-
-            {/* Three.js Inner Cube */}
-            <mesh position={[0, 0, 0]} castShadow receiveShadow>
-                <boxGeometry args={[0.3, 0.3, 0.3]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.3} />
-            </mesh>
-
-            {/* Three.js Corner Spheres */}
-            <mesh position={[0.5, 0.5, 0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[-0.5, 0.5, 0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[0.5, -0.5, 0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[-0.5, -0.5, 0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[0.5, 0.5, -0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[-0.5, 0.5, -0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[0.5, -0.5, -0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
-            </mesh>
-
-            <mesh position={[-0.5, -0.5, -0.5]} castShadow receiveShadow>
-                <sphereGeometry args={[0.1, 8, 8]} />
-                <meshStandardMaterial color="#FFFFFF" emissive="#FFFFFF" emissiveIntensity={0.5} />
+                <planeGeometry args={[2, 2]} />
+                <meshStandardMaterial
+                    map={texture}
+                    transparent={true}
+                    opacity={1}
+                    roughness={0.3}
+                    metalness={0.2}
+                />
             </mesh>
         </group>
     );
