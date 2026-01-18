@@ -65,6 +65,17 @@ const Hero = () => {
                         id="button"
                         text="🛠️ Meine Projekte"
                         />
+
+                        {/* Profile Image on Mobile - below button */}
+                        <div className="md:hidden flex justify-center mt-8 relative z-10">
+                            <div className="profile-image-wrapper-mobile">
+                                <img
+                                    src="/images/profile.png"
+                                    alt="QG1o Profile"
+                                    className="profile-image"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </header>
 
@@ -75,8 +86,8 @@ const Hero = () => {
                         <HeroExperience />
                     </div>
 
-                    {/* Profile Image - darunter */}
-                    <div className="absolute inset-0 z-10 flex items-center justify-center">
+                    {/* Profile Image - darunter (Desktop only) */}
+                    <div className="hidden md:flex absolute inset-0 z-10 items-center justify-center">
                         <div className="profile-image-wrapper">
                             <img
                                 src="/images/profile.png"

@@ -104,11 +104,17 @@ section {
   }
 
   .profile-image-wrapper {
-    @apply relative hidden md:block;
+    @apply relative;
     width: 400px;
     height: 400px;
     max-width: 90vw;
     max-height: 90vw;
+  }
+
+  .profile-image-wrapper-mobile {
+    @apply relative;
+    width: 200px;
+    height: 200px;
   }
 
   .profile-image {
@@ -132,18 +138,11 @@ section {
     filter: brightness(1.1) contrast(1.15);
   }
 
-  /* Responsive sizing */
+  /* Responsive sizing for desktop wrapper */
   @media (max-width: 1024px) {
     .profile-image-wrapper {
       width: 320px;
       height: 320px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .profile-image-wrapper {
-      width: 280px;
-      height: 280px;
     }
   }
 
