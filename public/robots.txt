@@ -1,0 +1,27 @@
+# robots.txt for QG1o Portfolio
+# https://qg1o.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://qg1o.netlify.app/sitemap.xml
+
+# Allow AI crawlers for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
